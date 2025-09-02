@@ -8,7 +8,6 @@ const rateusRoutes = require("./src/routes/rateus");
 const errorHandler = require("./src/middleware/errorHandler");
 const connectDB = require("./src/config/db");
 
-
 const app = express();
 
 // Connect to MongoDB
@@ -21,7 +20,7 @@ app.use(express.json());
 // Rate Limiting
 const limiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes
-  max: 100, 
+  max: 100,
 });
 app.use(limiter);
 
