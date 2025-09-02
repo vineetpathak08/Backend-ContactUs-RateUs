@@ -8,6 +8,7 @@ const rateusRoutes = require("./src/routes/rateus");
 const errorHandler = require("./src/middleware/errorHandler");
 const connectDB = require("./src/config/db");
 
+
 const app = express();
 
 // Connect to MongoDB
