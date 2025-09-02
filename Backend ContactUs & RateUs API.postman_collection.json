@@ -1,0 +1,121 @@
+{
+	"info": {
+		"_postman_id": "454c8c2b-9cf1-4266-a76c-1b347dcae76f",
+		"name": "Backend ContactUs & RateUs API",
+		"description": "API endpoints for ContactUs and RateUs functionality deployed on Vercel",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "47505125",
+		"_collection_link": "https://pathakvineet2005-7149551.postman.co/workspace/Vineet-Pathak's-Workspace~aac7b5ea-5a7b-484d-8927-859a8a9d2fb2/collection/47505125-454c8c2b-9cf1-4266-a76c-1b347dcae76f?action=share&source=collection_link&creator=47505125"
+	},
+	"item": [
+		{
+			"name": "ContactUs",
+			"item": [
+				{
+					"name": "Create Contact",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"John Doe\",\n    \"email\": \"john.doe@example.com\",\n    \"subject\": \"Test Subject\",\n    \"message\": \"This is a test message for the contact form.\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/public/api/contactus",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"public",
+								"api",
+								"contactus"
+							]
+						},
+						"description": "Create a new contact form submission"
+					},
+					"response": []
+				}
+			],
+			"description": "Contact Us API endpoints"
+		},
+		{
+			"name": "RateUs",
+			"item": [
+				{
+					"name": "Create Rating",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"rating\": 5,\n    \"review\": \"Excellent service! Very satisfied with the experience.\",\n    \"name\": \"Jane Smith\",\n    \"email\": \"jane.smith@example.com\",\n    \"context\": {\n        \"page\": \"homepage\",\n        \"version\": \"1.0\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/public/api/rateus",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"public",
+								"api",
+								"rateus"
+							]
+						},
+						"description": "Create a new rating and review submission"
+					},
+					"response": []
+				}
+			],
+			"description": "Rate Us API endpoints"
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://backend-contact-us-rate-us.vercel.app",
+			"type": "string"
+		}
+	]
+}
